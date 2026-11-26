@@ -1,0 +1,12 @@
+{
+  "name": "pet-adoption-center-manager",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Java 17 pet adoption manager with desktop and web interfaces",
+  "scripts": {
+    "build": "node scripts/run-java.js build",
+    "dev": "node scripts/run-java.js dev",
+    "start": "npm run dev",
+    "web": "node scripts/run-java.js web"
+  }
+}

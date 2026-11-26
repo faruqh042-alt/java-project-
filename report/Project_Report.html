@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Pet Adoption Center Manager - Project Report</title>
+<style>
+@page{size:A4;margin:14mm}
+body{font-family:Segoe UI,Arial;color:#30252A;margin:0}
+.page{height:258mm;box-sizing:border-box;padding:12mm 14mm;border:10px solid #800020;margin-bottom:8mm;page-break-after:always;position:relative}
+.page:last-child{page-break-after:auto}
+h1,h2,h3{color:#5B1A32}h1{font-size:30px;margin-top:10mm}h2{border-bottom:2px solid #C99A82;padding-bottom:4px}
+.tag{color:#A64D65;font-weight:bold}.box{background:#FFF8F0;border-left:5px solid #C99A82;padding:12px;margin:8px 0}
+ul{line-height:1.55}table{width:100%;border-collapse:collapse}th{background:#800020;color:white}td,th{border:1px solid #E8CCD3;padding:7px}
+.footer{position:absolute;bottom:7mm;right:12mm;color:#A64D65;font-size:10px}
+.cover{text-align:center;padding-top:48mm}.cover h1{font-size:38px}.cover .paw{font-size:58px;color:#C99A82}
+.small{font-size:12px}
+</style>
+</head>
+<body>
+<section class="page cover">
+<div class="paw">🐾</div>
+<h1>Pet Adoption Center Manager</h1>
+<p class="tag">Every Pet Deserves a Loving Home.</p>
+<h3>Java Micro Project Report</h3>
+<div class="box small">
+College Name: Bearys Institute of Technology<br>
+Department: Artificial Intelligence and Data Science<br>
+Subject Name: OOPJ<br>
+Subject Code: Not provided<br>
+Student Names: Faruq Hassan; Sheikh Mohammed Zain; Shammaz Ahmad<br>
+USNs: 4BP25AD011; 4BP25AD054; 4BP25AD052<br>
+Faculty Name: Not provided
+</div>
+<div class="footer">Pet Adoption Center Manager</div>
+</section>
+<section class="page">
+<h2>1. Introduction</h2>
+<p>The Pet Adoption Center Manager is a Java Swing desktop application developed to simplify pet registration, adopter management, adoption requests and adoption record maintenance.</p>
+<h2>2. Objectives</h2>
+<ul>
+<li>Maintain accurate pet and adopter information.</li>
+<li>Simplify the adoption request and approval process.</li>
+<li>Prevent duplicate adoption records and duplicate pending requests.</li>
+<li>Provide persistent data storage using CSV files.</li>
+<li>Demonstrate Java OOP concepts in a practical project.</li>
+</ul>
+<h2>3. Software Requirements</h2>
+<table><tr><th>Item</th><th>Requirement</th></tr>
+<tr><td>Language</td><td>Java 17</td></tr><tr><td>GUI</td><td>Java Swing</td></tr>
+<tr><td>Storage</td><td>CSV/Text files</td></tr><tr><td>IDE</td><td>Visual Studio Code</td></tr></table>
+<div class="footer">Page 2</div>
+</section>
+<section class="page">
+<h2>4. Implementation</h2>
+<p>The project uses separate model, manager and file-management classes:</p>
+<ul><li><b>Pet, Adopter, AdoptionRequest, AdoptionRecord:</b> domain models.</li>
+<li><b>PetManager, AdopterManager, AdoptionManager:</b> CRUD and adoption workflows.</li>
+<li><b>FileManager:</b> safe CSV loading, saving and exporting.</li>
+<li><b>Dashboard:</b> application layout and Swing interface.</li>
+<li><b>Main:</b> application entry point.</li></ul>
+<h2>5. Java OOP Concepts</h2>
+<ul><li>Classes and objects</li><li>Constructors and methods</li><li>Encapsulation through private attributes and public accessors</li>
+<li>Collections such as ArrayList and streams</li><li>Exception handling and input validation</li><li>File handling</li></ul>
+<div class="box">The approval workflow verifies availability, changes request status and pet status, and creates exactly one adoption record.</div>
+<div class="footer">Page 3</div>
+</section>
+<section class="page">
+<h2>6. Important Source Code</h2>
+<h3>Pet model</h3>
+<pre class="box">public class Pet {
+    private String petId;
+    private String name;
+    private String adoptionStatus;
+    // Constructor, getters and setters demonstrate encapsulation
+}</pre>
+<h3>Adoption approval</h3>
+<pre class="box">request.approve();
+pet.setAdoptionStatus("Adopted");
+records.add(new AdoptionRecord(...));
+petManager.save();
+fileManager.saveRequests(requests);
+fileManager.saveAdoptionRecords(records);</pre>
+<div class="footer">Page 4</div>
+</section>
+<section class="page">
+<h2>7. Output Screenshots</h2>
+<div class="box">Dashboard screenshot: <b>screenshots/dashboard.png</b></div>
+<div class="box">Pet management screenshot: <b>screenshots/pet-management.png</b></div>
+<div class="box">Adoption request screenshot: <b>screenshots/adoption-requests.png</b></div>
+<p class="small">Run the application from VS Code and capture these screens during the project demonstration.</p>
+<h2>8. Conclusion</h2>
+<p>The application provides a complete, offline, college-level Java management system with persistent storage, functional CRUD operations, a controlled adoption workflow and a consistent premium interface.</p>
+<div class="footer">Page 5</div>
+</section>
+</body></html>

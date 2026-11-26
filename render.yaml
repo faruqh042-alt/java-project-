@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: pet-adoption-center-manager
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    disk:
+      name: pet-adoption-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: APP_USERNAME
+        sync: false
+      - key: APP_PASSWORD
+        sync: false
+      - key: DATA_DIR
+        value: /var/data
